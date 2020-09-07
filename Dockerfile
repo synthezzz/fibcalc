@@ -1,1 +1,2 @@
-FROM node:alpine
+FROM amazonlinux
+RUN yum update -y
