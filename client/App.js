@@ -27,3 +27,5 @@ class App extends Component {
 }
 
 export default App;
+
+// Some minor change
