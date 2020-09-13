@@ -2,12 +2,15 @@ version: '3'
 services:
     postgres:
         image: 'postgres:latest'
+        environment: 
+            - POSTGRES_PASSWORD=postgres_password
     redis: 
         image: 'redis:latest'    
     server: 
         build: 
-            Dockerfile.dev
+            dockerfile: Dockerfile.dev
             context: ./server
-    volumes:
-        - /app/node_modules
-        - ./server:/app        
+        volumes: 
+            - /app/node_modules
+            - ./server:/app    
+            
