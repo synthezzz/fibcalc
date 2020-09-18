@@ -1,7 +1,4 @@
 language: generic
-branches:
-    only:
-        - master
 sudo: required
 services:
     - docker
@@ -12,6 +9,7 @@ script:
     - docker run -e CI=true synthezzz/react-test npm test
 
 after_success:
+#Build images    
     - docker build -t synthezzz/fibcalc-client ./client
     - docker build -t synthezzz/fibcalc-nginx ./nginx
     - docker build -t synthezzz/fibcalc-server ./server
