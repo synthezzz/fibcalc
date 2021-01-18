@@ -25,8 +25,8 @@ deploy:
     edge: true
     provider: elasticbeanstalk
     region: us-east-2
-    app: fibcalc2
-    env: Fibcalc2-env
+    app: fibcalc3
+    env: Fibcalc3-env
     bucket_name: elasticbeanstalk-us-east-2-720927163681
     bucket_path: fibcalc
     on:
